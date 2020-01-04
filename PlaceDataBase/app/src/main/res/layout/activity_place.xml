@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceActivity">
+    //name
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="24dp"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    //title
+    <TextView
+        android:id="@+id/titlelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="5dp"
+
+        android:text="@string/title_label"
+        android:textSize="16dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="45dp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:hint="Title"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/titlelabel"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    //category
+    <TextView
+        android:id="@+id/categorylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category_label"
+        android:layout_marginTop="45dp"
+
+
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/titlelabel"
+        app:layout_constraintTop_toTopOf="@+id/titlelabel" />
+
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="35dp"
+
+        android:hint="Category"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@+id/categorylabel"
+        app:layout_constraintTop_toTopOf="@+id/titlelabel" />
+    //address
+
+    <TextView
+        android:id="@+id/addresslabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+
+        android:text="@string/address_label"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/categorylabel"
+        app:layout_constraintTop_toTopOf="@+id/categorylabel" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:hint="Address"
+        android:inputType="text|textCapSentences"
+        android:imeOptions="actionDone"
+        android:background="@android:drawable/edit_text"
+        android:textSize="14dp"
+
+        app:layout_constraintLeft_toLeftOf="@+id/addresslabel"
+        app:layout_constraintTop_toTopOf="@+id/addresslabel" />
+    //description
+    <TextView
+        android:id="@+id/descriptionlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_label"
+        android:layout_marginTop="100dp"
+
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/addresslabel"
+        app:layout_constraintTop_toTopOf="@+id/addresslabel" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:imeOptions="actionDone"
+        android:background="@android:drawable/edit_text"
+
+        android:hint="Description"
+        android:textSize="14dp"
+        android:inputType="text|textCapSentences"
+
+        app:layout_constraintLeft_toLeftOf="@+id/descriptionlabel"
+        app:layout_constraintTop_toTopOf="@+id/descriptionlabel"
+        />
+    //elevation
+    <TextView
+        android:id="@+id/elevationlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+
+
+        android:text="@string/elevation_label"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/longitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/longitudelabel" />
+
+    <EditText
+        android:id="@+id/elevation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="155dp"
+
+        android:hint="Elevation"
+        android:maxLength="8"
+        android:imeOptions="actionDone"
+        android:textSize="14dp"
+        android:inputType="numberDecimal"
+
+        app:layout_constraintLeft_toLeftOf="@+id/longitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/description" />
+    //longitude
+    <TextView
+        android:id="@+id/longitudelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude_label"
+        android:layout_marginTop="125dp"
+
+
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/description"
+        app:layout_constraintTop_toTopOf="@+id/description" />
+
+    <EditText
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="Longitude"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="115dp"
+        android:imeOptions="actionDone"
+        android:maxLength="8"
+        android:textSize="14dp"
+        android:inputType="numberDecimal"
+
+        app:layout_constraintLeft_toLeftOf="@+id/longitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/description" />
+    //latitude
+    <TextView
+        android:id="@+id/latitudelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitude_label"
+        android:layout_marginLeft="220dp"
+
+
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/longitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/longitudelabel" />
+
+    <EditText
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="115dp"
+
+        android:hint="Latitude"
+        android:maxLength="8"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:textSize="14dp"
+
+        app:layout_constraintLeft_toLeftOf="@+id/latitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/description" />
+
+    <Button
+        android:id="@+id/distancebtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="calDistance"
+        android:text="@string/action_distance"
+        app:layout_constraintLeft_toLeftOf="@+id/latitudelabel"
+        app:layout_constraintTop_toTopOf="@+id/latitudelabel" />
+
+    <Button
+        android:id="@+id/Addbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:onClick="addClicked"
+        android:text="@string/action_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+
+        android:textSize="14dp"
+        android:hint="Distance"
+        android:lines = "2"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/distancebtn"
+        app:layout_constraintTop_toTopOf="@+id/elevation" />
+
+    <Spinner
+        android:id="@+id/placeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/elevation"
+        app:layout_constraintTop_toBottomOf="@+id/latitude"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+</android.support.constraint.ConstraintLayout>
+

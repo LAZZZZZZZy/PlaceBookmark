@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="col_header">
+        <item>Name</item>
+        <item>Category</item>
+    </string-array>
+
+</resources>

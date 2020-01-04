@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PlaceDataBase</string>
+    <string name="description_label">Description:</string>
+    <string name="category_label">Category:</string>
+    <string name="title_label">Title:</string>
+    <string name="address_label">Address:</string>
+    <string name="elevation_label">Elevation:</string>
+    <string name="latitude_label">Latitude:</string>
+    <string name="longitude_label">Longitude:</string>
+    <string name="action_add">Add</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_distance">Distance</string>
+    <string name="pname">Place Name</string>
+    <string name="category">Category</string>
+</resources>
