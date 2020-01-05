@@ -10,7 +10,11 @@
     <string name="action_add">Add</string>
     <string name="action_remove">Remove</string>
     <string name="action_edit">Edit</string>
+    <string name="action_map">Map</string>
     <string name="action_distance">Distance</string>
+    <string name="action_locate">Locate</string>
     <string name="pname">Place Name</string>
     <string name="category">Category</string>
+    <string name="google_map_key">AIzaSyDrJdQUseJrtV8OH_LxgIMg4F7xKa2Ia7A</string>
+
 </resources>

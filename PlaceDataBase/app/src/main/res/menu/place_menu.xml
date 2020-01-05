@@ -13,4 +13,9 @@
        android:title="@string/action_edit"
        app:showAsAction="ifRoom" />
 
+   <item android:id="@+id/action_map"
+       android:icon="@android:drawable/ic_menu_mapmode"
+       android:title="@string/action_map"
+       app:showAsAction="ifRoom" />
+
 </menu>

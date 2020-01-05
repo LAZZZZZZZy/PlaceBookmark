@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlaceActivity">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     //name
 
     <EditText
@@ -216,35 +220,48 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="92dp"
         android:onClick="calDistance"
         android:text="@string/action_distance"
         app:layout_constraintLeft_toLeftOf="@+id/latitudelabel"
         app:layout_constraintTop_toTopOf="@+id/latitudelabel" />
 
     <Button
+        android:id="@+id/locatebtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="548dp"
+        android:onClick="locatePlace"
+        android:text="@string/action_locate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/Addbtn"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:onClick="addClicked"
         android:text="@string/action_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="60dp"
 
-        android:textSize="14dp"
         android:hint="Distance"
-        android:lines = "2"
+        android:lines="2"
+        android:textSize="14dp"
 
+        app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/distancebtn"
         app:layout_constraintTop_toTopOf="@+id/elevation" />
@@ -254,11 +271,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="90dp"
+        android:layout_marginTop="24dp"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintLeft_toRightOf="@+id/elevation"
-        app:layout_constraintTop_toBottomOf="@+id/latitude"
-        app:layout_constraintRight_toRightOf="parent"/>
-    
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitude" />
 </android.support.constraint.ConstraintLayout>
-
+</ScrollView>

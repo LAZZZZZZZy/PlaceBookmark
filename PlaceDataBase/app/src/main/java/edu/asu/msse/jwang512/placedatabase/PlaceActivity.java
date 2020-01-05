@@ -11,6 +11,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -133,6 +134,10 @@ public class PlaceActivity extends AppCompatActivity implements DialogInterface.
                 return true;
             case R.id.action_edit:
                 editPlace();
+                return true;
+            case R.id.action_map:
+                showMap();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -179,6 +184,16 @@ public class PlaceActivity extends AppCompatActivity implements DialogInterface.
             }
         } );
         dialog.show();
+    }
+
+    public void showMap()
+    {
+        android.util.Log.d("click map","click");
+        Intent intent = new Intent(this, MapActivity.class);
+        intent.putExtra("Longitude",pd.longitude);
+        intent.putExtra("Latitude",pd.latitude);
+        intent.putExtra("Name",pd.name);
+        startActivity(intent);
     }
 
     public void removeDBPlace(){
@@ -307,6 +322,22 @@ public class PlaceActivity extends AppCompatActivity implements DialogInterface.
         }
         android.util.Log.w(this.getClass().getSimpleName(),"newPlace: " + name + "   " + newPlace.getCategory());
         return newPlace;
+    }
+
+    public void locatePlace(View view)
+    {
+        Intent intent = new Intent(this, MapActivity.class);
+        intent.putExtra("Locate", true);
+        startActivityForResult(intent, 1);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == 1&&  resultCode == 1)
+        {
+            elevation.setText(String.valueOf(data.getDoubleExtra("Elevation",0)));
+            longitude.setText(String.valueOf(data.getDoubleExtra("Longitude",0)));
+            latitude.setText(String.valueOf(data.getDoubleExtra("Latitude",0)));
+        }
     }
 
     // calculate distance and bearing
