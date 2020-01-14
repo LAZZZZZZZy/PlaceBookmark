@@ -15,6 +15,6 @@
     <string name="action_locate">Locate</string>
     <string name="pname">Place Name</string>
     <string name="category">Category</string>
-    <string name="google_map_key">AIzaSyDrJdQUseJrtV8OH_LxgIMg4F7xKa2Ia7A</string>
+    <string name="google_map_key">PUT YOUR GOOGLE MAP API KEY HERE</string>
 
 </resources>
